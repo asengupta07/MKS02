@@ -1,7 +1,5 @@
-dlib-bin
-matplotlib
-numpy
-opencv-python-headless
-Pillow
-streamlit
-tensorflow
+dlib_bin==19.24.2
+numpy==1.25.2
+Pillow==10.0.1
+streamlit==1.30.0
+tensorflow==2.15.0.post1

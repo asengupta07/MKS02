@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
-import cv2
+from PIL import Image
+import io
 from helper import predict
 
 st.title('Student Engagement Detector')
@@ -11,7 +12,10 @@ if img is not None:
     st.write('')
     st.write('Classifying...')
     image_np = np.frombuffer(img.read(), np.uint8)
-    img = cv2.imdecode(image_np, cv2.IMREAD_COLOR)
+    image_bytes = image_np.tobytes()
+    image_file = io.BytesIO(image_bytes)
+    img = Image.open(image_file)
+    img = np.array(img)
     eng, conf = predict(img)
     st.write(f'Prediction: {eng}')
     st.write(f'Confidence: {conf*100:.2f}%')
