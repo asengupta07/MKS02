@@ -39,9 +39,3 @@
 
 ## Deployed Demo:
 [HuggingFace Spaces Demo Link](https://huggingface.co/spaces/asengupta07/EngagementTracker)
-
-## Contributors:
-- Arnab Sengupta
-- Srijan Sarkar
-- Sachindra Kumar Singh
-- Ankana Datta
